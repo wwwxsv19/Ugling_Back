@@ -27,13 +27,11 @@ public class Item {
     private Long itemPrice; // 상품 가격
     private int itemCount; // 상품 재고 수량
     private int itemWeight; // 상품 무게
-    private int itemCalory; // 상품 칼로리
-    private String itemIngre; // 상품 영양성분
-    private String itemWarn; // 상품 주의사항
+    private String itemExplain; // 상품 상세 정보
     private Category itemCategory; // 상품 카테고리
 
     @OneToMany(
-            mappedBy = "grade",
+            mappedBy = "item",
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
